@@ -1,4 +1,4 @@
-[README.md](https://github.com/user-attachments/files/25570441/README.md)
+[README.md](https://github.com/user-attachments/files/25571484/README.md)
 <div align="center">
 
 <img src="https://github.com/user-attachments/assets/3a505f99-9af4-4a7f-9852-7322e915fbab" alt="Animo Starter Kit" width="100%" />
@@ -19,7 +19,7 @@ The production-ready **Tauri 2** boilerplate for building cross-platform AI desk
 
 <br />
 
-[**Get the Starter Kit →**](https://roistore.lemonsqueezy.com/checkout/buy/bbd0dbc2-02c9-4442-a810-5e4bc6235d62)
+[**Get on Lemon Squeezy →**](https://roistore.lemonsqueezy.com/checkout/buy/bbd0dbc2-02c9-4442-a810-5e4bc6235d62) | [**Get on Gumroad →**](https://dakju.gumroad.com/l/animo-starter-kit)
 
 <br />
 
@@ -146,7 +146,7 @@ The character's eyes follow your cursor in real-time at 30fps. Powered by the sa
 
 <div align="center">
 
-[**Get the Starter Kit →**](https://roistore.lemonsqueezy.com/checkout/buy/bbd0dbc2-02c9-4442-a810-5e4bc6235d62)
+[**Get on Lemon Squeezy →**](https://roistore.lemonsqueezy.com/checkout/buy/bbd0dbc2-02c9-4442-a810-5e4bc6235d62) | [**Get on Gumroad →**](https://dakju.gumroad.com/l/animo-starter-kit)
 
 </div>
 
@@ -181,7 +181,7 @@ This is a commercial product. Source code is provided upon purchase. See [LICENS
 
 *Stop building plumbing. Start building characters.*
 
-**[Get Animo Starter Kit →](https://roistore.lemonsqueezy.com/checkout/buy/bbd0dbc2-02c9-4442-a810-5e4bc6235d62)**
+**[Get on Lemon Squeezy →](https://roistore.lemonsqueezy.com/checkout/buy/bbd0dbc2-02c9-4442-a810-5e4bc6235d62)** | **[Get on Gumroad →](https://dakju.gumroad.com/l/animo-starter-kit)**
 
 Made by [OpenClo](mailto:animo.starter@gmail.com)
 
