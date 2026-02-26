@@ -1,7 +1,7 @@
+[README.md](https://github.com/user-attachments/files/25570441/README.md)
 <div align="center">
 
-<!-- Replace with your actual cover image URL after uploading to the repo -->
-<!-- <img src="assets/cover.png" alt="Animo Starter Kit" width="100%" /> -->
+<img src="https://github.com/user-attachments/assets/3a505f99-9af4-4a7f-9852-7322e915fbab" alt="Animo Starter Kit" width="100%" />
 
 # Animo Starter Kit
 
